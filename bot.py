@@ -5,10 +5,10 @@ from apscheduler.schedulers.background import BackgroundScheduler
 import datetime
 import time
 import json
+import os
 
-# === CONFIGURAZIONE ===
-TELEGRAM_TOKEN = "IL_TUO_TOKEN_TELEGRAM"
-API_KEY = "IL_TUO_TOKEN_FOOTBALLDATA"
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
+API_KEY = os.getenv("API_KEY")
 USER_FILE = "users.json"
 
 bot = Bot(token=TELEGRAM_TOKEN)
